@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson-9(DOM)</title>
+</head>
+<style>
+    body{
+        background-color: wheat;    
+    }
+    .card{
+        height: 150px;
+        width:150px;
+        background-color: lightcoral;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 15px;
+        flex-direction: column;
+        padding: 45px;
+    }
+    #btn , #changebtn , #sbtn{
+        background-color: blue;
+        border-radius: 5px;
+        color: white;
+    }
+    p{
+        font-style: italic;
+    }
+    fieldset{
+        background-color: lightcyan;
+    }
+    #formmy{
+        height: 200px;
+        width: 350px;
+        margin-left: 15px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+    #smallform{
+        height: 55px;
+        width: 190px;
+        background-color: lightcoral;
+        padding: 5px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <h1 style="text-align:center; background-color:lightseagreen; border-radius:5px; margin-top:0px;">JS HANDSON-9(DOM)</h1>
+    <div class="time">
+        <span style="font-weight:bold">TIME:</span>
+        <span id="hrs">00</span>
+        <span id="min">00</span>
+        <span id="sec">00</span>
+        <span id="ampm"></span>
+    </div>
+    <h1 id="func">Hello</h1>
+    <h1 id="heading">hello</h1>
+    <!-- <h4>hello</h4> -->
+    <h2 id="replac">Hello World !</h2>
+    <button id="changebtn" onclick="textReplace()">Replace Text</button><br><br>
+    <div class="box">Box</div><br>
+    <fieldset>
+        <span style="font-weight:bold;">6.Difference between Window and Document?</span>
+        <p>Window: It is the root level element in any web page.All Global variables are defined on the window object only.For example:alert(),confirm() are the methods in window object.The window object is the topmost object of the DOM hierarchy. It represents a browser window or frame that displays the contents of the webpage. Whenever a window appears on the screen to display the contents of the document, the window object is created.
+        </p>
+        <p>Document: It is the direct child of window object(DOM).The document object represent a web page that is loaded in the browser. By accessing the document object, we can access the element in the HTML page.
+        </p>
+    </fieldset><br>
+    <form id="smallform">
+        <label for="year"><b>Select Year:</b></label>
+        <select id="year">
+            <option value="select year" disabled hidden selected>select year</option>
+            <option value="2020-2021">2020-2021</option>
+            <option value="2021-2022">2021-2022</option>
+            <option value="2022-2023">2022-2023</option>
+            <option value="2023-2024">2023-2024</option>
+        </select><br><br>
+        <span id="smallform">year: <span id="output">     </span></span>
+    </form><br>
+    <div id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, dolores.</div><br><br>
+    <form id="formmy">
+        <label for="fname">Full Name:</label>
+        <input type="text" placeholder="Enter Your Name..." name="fname" id="name" value=""><br><br>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter Your Email..." name="email" id="mail" value=""><br><br>
+        <label for="mobile">Mobile No:</label>
+        <input type="number" placeholder="Enter Your Mobile No..." name="mobile" id="phnum" value=""><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date"  name="dob" id="dofb" value=""><br><br>
+        <input type="button" value="Submit" id="sbtn" onclick="formmy()">
+    </form>
+    <div id="flex-container" style="display:flex; align-items:center; margin:10px;">
+        <div class="card">CARD 1</div>
+        <div class="card">CARD 2</div>
+        <div class="card">CARD 3</div>
+        <button id="btn" onclick="changeDirection()">Change Flex Direction</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
